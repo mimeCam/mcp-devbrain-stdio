@@ -3,6 +3,14 @@
 This `devbrain` MCP server retrieves tech-related information, such as code snippets and links to developer blogs, based on developer questions.
 It is like a web-search but tailors only curated knowledge from dev blogs and posts by software developers.
 
+| <img width="400" alt="usage-claude" src="https://github.com/user-attachments/assets/f87b80ee-7829-43e8-9223-a02a38b4fd12" /> | <img width="400" alt="usage-goose" src="https://github.com/user-attachments/assets/a0525745-8435-4cce-aadb-418e6af81a21" /> |
+|:--------:|:--------:|
+| Claude app | Goose app |
+
+DevBrain returns articles as short description + URL, you can then:
+ - instruct LLM agent like `Claude` or `Goose` to fetch full contents of the articles using provided URLs
+ - instruct LLM to implement a feature based on all or selected articles
+
 ## Installation and Usage
 
 1. Via `uv` or `uvx`. Install `uv` and `uvx` (if not installed):
