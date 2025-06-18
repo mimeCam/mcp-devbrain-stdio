@@ -1,0 +1,26 @@
+# pyproject.toml
+[build-system]
+requires = ["setuptools>=61.0.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "devbrain"
+version = "1.0.5"
+authors = [{ name = "Anton", email = "anton@mimecam.com" }]
+description = "A FastMCP server for DevBrain stdio communication."
+readme = "README.md"
+license = "MIT"
+license-files = ["LICENSE"]
+requires-python = ">=3.10"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+]
+dependencies = ["fastmcp", "requests"]
+
+[project.urls]
+Homepage = "https://github.com/mimeCam/devbrain-stdio"
+"Bug Tracker" = "https://github.com/mimeCam/devbrain-stdio/issues"
+
+[project.scripts]
+devbrain-stdio-server = "mcp_server.server:main" # Assuming 'main' is a function in src/mcp_server/server.py
