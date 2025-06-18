@@ -13,9 +13,14 @@ DevBrain returns articles as short description + URL, you can then:
 
 ## Installation and Usage
 
-1. Via `uv` or `uvx`. Install `uv` and `uvx` (if not installed):
+Via `uv` or `uvx`. Install `uv` and `uvx` (if not installed):
 ```bash
 curl -LsSf https://astral.sh/uv/install.sh | sh
+```
+
+Example command to run MCP server in `stdio` mode:
+```bash
+uvx --from devbrain devbrain-stdio-server
 ```
 
 To add `devbrain` to Claude's config, edit the file:
@@ -45,6 +50,7 @@ Set your `API_TOKEN` in the `env` block.
 sudo ln -s ~/.local/bin/uvx /usr/local/bin/uvx
 sudo ln -s ~/.local/bin/uv /usr/local/bin/uv
 ```
+and restart Claude.
 
 
 ## License
