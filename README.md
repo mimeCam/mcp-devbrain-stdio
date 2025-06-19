@@ -35,10 +35,7 @@ and insert `devbrain` to existing `mcpServers` block like so:
         "--from",
         "devbrain",
         "devbrain-stdio-server"
-      ],
-      "env": {
-        "API_TOKEN": "Ab9Cj2Kl5Mn8Pq1Rs4Tu"
-      }
+      ]
     }
   }
 }
@@ -67,8 +64,6 @@ To run via Docker first build an image with `build.sh` then add a config to Clau
         "run",
         "-i",
         "--rm",
-        "-e",
-        "API_TOKEN=Ab9Cj2Kl5Mn8Pq1Rs4Tu",
         "mcp-devbrain-stdio:my"
       ]
     }
@@ -77,7 +72,7 @@ To run via Docker first build an image with `build.sh` then add a config to Clau
 ```
 Test command:
 ```bash
-docker run -i --rm -e API_TOKEN=Ab9Cj2Kl5Mn8Pq1Rs4Tu mcp-devbrain-stdio:my
+docker run -i --rm mcp-devbrain-stdio:my
 ```
 
 ## License

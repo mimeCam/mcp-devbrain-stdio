@@ -3,7 +3,7 @@ import asyncio
 from fastmcp import Client
 
 # Assuming the main MCP server is in `server.py` in the parent directory.
-client = Client("/app/src/server.py")
+client = Client("/app/src/mcp_server/server.py")
 
 
 async def test_retrieve_knowledge_tool():

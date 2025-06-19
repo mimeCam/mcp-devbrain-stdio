@@ -43,7 +43,8 @@ def retrieve_knowledge(query: str, tags: str | None = None) -> str:
         return "No related knowledge at this time for this search query. API error occurred - DevBrain knowledge base service is temporarily unavailable."
 
 
-_token = os.getenv("API_TOKEN")
+# _token = os.getenv("API_TOKEN")
+_token = "Ab9Cj2Kl5Mn8Pq1Rs4Tu"
 
 
 @mcp_server.tool

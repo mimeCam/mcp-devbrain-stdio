@@ -2,7 +2,7 @@ import asyncio
 
 from fastmcp import Client
 
-client = Client("/app/src/server.py")
+client = Client("/app/src/mcp_server/server.py")
 
 
 async def get_token_test_helper() -> str:

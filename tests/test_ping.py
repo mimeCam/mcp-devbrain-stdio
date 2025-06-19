@@ -5,7 +5,7 @@
 
 # from fastmcp import Client
 
-# client = Client("/app/src/server.py")
+# client = Client("/app/src/mcp_server/server.py")
 
 
 # async def test_ping_tool():
