@@ -5,7 +5,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "devbrain"
-version = "1.0.5"
+version = "1.0.6"
 authors = [{ name = "Anton", email = "anton@mimecam.com" }]
 description = "A FastMCP server for DevBrain stdio communication."
 readme = "README.md"

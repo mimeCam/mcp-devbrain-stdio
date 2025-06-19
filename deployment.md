@@ -25,13 +25,21 @@ To run the test locally:
 uvx --index-url https://test.pypi.org/simple/ --extra-index-url https://pypi.org/simple/ --from devbrain devbrain-stdio-server
 `
 
+When deployment to `test` env finished successfully show URL to the project on test.pypi: `https://test.pypi.org/project/devbrain`. Also output a testing command to let user know how to verify that just uploaded tool works correctly.
+
 
 ### Step 4 - publish to prod-pypi
 After it was tested on test-pypi you may publish to prod.
-
 `
 ./deploy.sh prod
 `
+
+To run locally:
+`
+uvx --from devbrain devbrain-stdio-server
+`
+
+When deployment to `prod` env finished successfully show URL to the project on test.pypi: `https://pypi.org/project/devbrain`. Also output a testing command to let user know how to verify that just uploaded tool works correctly.
 
 
 ### Notes
