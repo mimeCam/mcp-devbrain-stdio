@@ -47,11 +47,38 @@ Set your `API_TOKEN` in the `env` block.
 
 [Claude is known to fail](https://gist.github.com/gregelin/b90edaef851f86252c88ecc066c93719) when working with `uv` and `uvx` binaries. See related: https://gist.github.com/gregelin/b90edaef851f86252c88ecc066c93719. If you encounter this error then run these commands in a Terminal:
 ```bash
+sudo mkdir -p /usr/local/bin
+```
+```bash
 sudo ln -s ~/.local/bin/uvx /usr/local/bin/uvx
+```
+```bash
 sudo ln -s ~/.local/bin/uv /usr/local/bin/uv
 ```
 and restart Claude.
 
+To run via Docker first build an image with `build.sh` then add a config to Claude like so:
+```json
+{
+  "mcpServers": {
+    "devbrain": {
+      "command": "docker",
+      "args": [
+        "run",
+        "-i",
+        "--rm",
+        "-e",
+        "API_TOKEN=Ab9Cj2Kl5Mn8Pq1Rs4Tu",
+        "mcp-devbrain-stdio:my"
+      ]
+    }
+  }
+}
+```
+Test command:
+```bash
+docker run -i --rm -e API_TOKEN=Ab9Cj2Kl5Mn8Pq1Rs4Tu mcp-devbrain-stdio:my
+```
 
 ## License
 This project is released under the MIT License and is developed by mimeCam as an open-source initiative.

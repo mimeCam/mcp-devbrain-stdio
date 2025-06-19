@@ -13,14 +13,8 @@ RUN pip install --no-cache-dir -r requirements.txt
 # Copy the rest of the application code into the container at /app
 COPY . .
 
-# Expose the port your application listens on (if any, adjust as needed)
-# For a FastMCP server, it might be listening on a specific port.
-# If you know the port, please let me know, otherwise, I'll omit this or add a placeholder.
-# EXPOSE 8000
-
 # Define environment variable
 ENV PYTHONPATH=/app/src
 
 # Run the application
-# Corrected entry point: src/server.py
-CMD ["python", "src/server.py"]
+ENTRYPOINT ["python", "src/mcp_server/server.py"]

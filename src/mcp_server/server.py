@@ -10,14 +10,15 @@ mcp_server = FastMCP(
 
 
 @mcp_server.tool
-def retrieve_knowledge(query: str) -> str:
-    """Queries DevBrain (aka `developer's brain` system) and returns relevant information.
+def retrieve_knowledge(query: str, tags: str | None = None) -> str:
+    """Queries DevBrain (aka `developer`s brain` system) and returns relevant information.
 
     Args:
-        q: The question or ask to query for knowledge
+        query: The question or ask to query for knowledge.
+        tags: Optional comma-separated list of tags (keywords) to filter or ground the search. (e.g.: `ios`, `ios,SwiftUI`, `react-native`, `web`, `web,react`, `fullstack,react-native,flutter`). Do not provide more than 3 words.
 
     Returns:
-        str: Helpful knowledge and context information from DevBrain (formatted as JSON list of article items, with title, short description and a URL to the full article).
+        str: Helpful knowledge and context information from DevBrain (formatted as JSON list of articles, with title, short description and a URL to the full article).
     """
 
     global _token
@@ -32,18 +33,14 @@ def retrieve_knowledge(query: str) -> str:
         "content-type": "application/json",
     }
     data = {"q": query}
+    if tags:
+        data["tags"] = tags
     try:
         response = requests.post(url, headers=headers, json=data)
         response.raise_for_status()  # Raise an HTTPError for bad responses (4xx or 5xx)
         return response.text
     except requests.exceptions.RequestException:
         return "No related knowledge at this time for this search query. API error occurred - DevBrain knowledge base service is temporarily unavailable."
-
-
-# @mcp_server.tool
-# def ping() -> str:
-#     """A simple ping tool that returns 'pong'."""
-#     return "pong"
 
 
 _token = os.getenv("API_TOKEN")
