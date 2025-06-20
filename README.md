@@ -40,7 +40,6 @@ and insert `devbrain` to existing `mcpServers` block like so:
   }
 }
 ```
-Set your `API_TOKEN` in the `env` block.
 
 [Claude is known to fail](https://gist.github.com/gregelin/b90edaef851f86252c88ecc066c93719) when working with `uv` and `uvx` binaries. See related: https://gist.github.com/gregelin/b90edaef851f86252c88ecc066c93719. If you encounter this error then run these commands in a Terminal:
 ```bash
