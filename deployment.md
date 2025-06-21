@@ -21,11 +21,26 @@ Publish to `test` first and then test the package before publishing to main (pro
 Project's official test-pypi page: https://test.pypi.org/project/devbrain/
 
 To run the test locally:
-`
+```bash
 uvx --index-url https://test.pypi.org/simple/ --extra-index-url https://pypi.org/simple/ --from devbrain devbrain-stdio-server
-`
+```
+Claude config:
+```json
+"devbrain": {
+      "command": "uvx",
+      "args": [
+        "--index-url",
+        "https://test.pypi.org/simple/",
+        "--extra-index-url",
+        "https://pypi.org/simple/",
+        "--from",
+        "devbrain",
+        "devbrain-stdio-server"
+      ]
+    }
+```
 
-When deployment to `test` env finished successfully show URL to the project on test.pypi: `https://test.pypi.org/project/devbrain`. Also output a testing command to let user know how to verify that just uploaded tool works correctly.
+When deployment to `test` env finished successfully show URL to the project on test.pypi: `https://test.pypi.org/project/devbrain`. Also output a testing command to let me know how to verify that just uploaded tool works correctly.
 
 
 ### Step 4 - publish to prod-pypi
