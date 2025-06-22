@@ -1,7 +1,12 @@
 # DevBrain MCP Server
 
-This `devbrain` MCP server retrieves tech-related information, such as code snippets and links to developer blogs, based on developer questions.
-It is like a web-search but tailors only curated knowledge from dev blogs and posts by software developers.
+**Chat with your favorite newsletters** (coding, tech, business).
+
+DevBrain pulls up relevant code snippets, indie developer articles, and blog posts, all based on what you're looking for.
+
+It's kind of like a web search, but specifically tuned for high-quality, developer-curated content. You can easily plug in your favorite newsletters to expand its knowledge base even further.
+
+_**For example**, when you are implementing feature "A", DevBrain can pull related articles that would serve as a solid reference and a foundation for your implementation._
 
 | <img width="400" alt="usage-claude" src="https://github.com/user-attachments/assets/f87b80ee-7829-43e8-9223-a02a38b4fd12" /> | <img width="400" alt="usage-goose" src="https://github.com/user-attachments/assets/a0525745-8435-4cce-aadb-418e6af81a21" /> |
 |:--------:|:--------:|
