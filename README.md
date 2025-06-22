@@ -60,12 +60,19 @@ sudo ln -s ~/.local/bin/uv /usr/local/bin/uv
 ```
 and restart Claude.
 
+
 ## Integration for Cline and other AI agents
 Command to start DevBrain MCP in `stdio` mode:
 ```bash
 uvx --from devbrain devbrain-stdio-server
 ```
 and add this command to a config file of the AI agent (Cline or other).
+
+Note that DevBrain requires Python 3.10+ support. Most systems have it installed. However VS Code (that Cline depends on) is shipped with Python 3.9. Use correct version of Python when running DevBrain MCP. A corrected version to launch DevBrain MCP looks like this:
+```bash
+uvx  --python 3.10 --from devbrain devbrain-stdio-server
+```
+where Python version may be 3.10, 3.12, 3.13 (or other that is installed and available on the system).
 
 ## Docker integration
 
