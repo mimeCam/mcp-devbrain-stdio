@@ -1,0 +1,12 @@
+<svg width="400" height="200" viewBox="0 0 400 200" xmlns="http://www.w3.org/2000/svg">
+  <!-- Black background -->
+  <rect width="400" height="200" fill="#000000"/>
+  
+  <!-- Red curly brace -->
+  <text x="80" y="130" font-family="monospace" font-size="120" font-weight="bold" fill="#ff0000">{</text>
+  
+  <!-- Three white dots (10% smaller than before) -->
+  <circle cx="190" cy="135" r="12" fill="#ffffff"/>
+  <circle cx="230" cy="135" r="12" fill="#ffffff"/>
+  <circle cx="270" cy="135" r="12" fill="#ffffff"/>
+</svg>
