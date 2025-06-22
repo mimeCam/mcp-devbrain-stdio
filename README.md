@@ -28,7 +28,7 @@ Example command to run MCP server in `stdio` mode:
 uvx --from devbrain devbrain-stdio-server
 ```
 
-## Claude
+## Use in Claude
 
 To add `devbrain` to Claude's config, edit the file:
 `~/Library/Application Support/Claude/claude_desktop_config.json`
@@ -60,9 +60,9 @@ sudo ln -s ~/.local/bin/uv /usr/local/bin/uv
 ```
 and restart Claude.
 
-## Docker
+## Docker integration
 
-To run via Docker first build an image with `build.sh` then add a config to Claude like so:
+You can run this MCP as a Docker container in STDIO mode. First build an image with `build.sh`. Then add a config to Claude like so:
 ```json
 {
   "mcpServers": {
@@ -78,7 +78,7 @@ To run via Docker first build an image with `build.sh` then add a config to Clau
   }
 }
 ```
-Test command:
+Test command to verify that docker container works correctly:
 ```bash
 docker run -i --rm mcp-devbrain-stdio:my
 ```
