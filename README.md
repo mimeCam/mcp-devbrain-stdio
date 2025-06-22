@@ -60,6 +60,13 @@ sudo ln -s ~/.local/bin/uv /usr/local/bin/uv
 ```
 and restart Claude.
 
+## Integration for Cline and other AI agents
+Command to start DevBrain MCP in `stdio` mode:
+```bash
+uvx --from devbrain devbrain-stdio-server
+```
+and add this command to a config file of the AI agent (Cline or other).
+
 ## Docker integration
 
 You can run this MCP as a Docker container in STDIO mode. First build an image with `build.sh`. Then add a config to Claude like so:
