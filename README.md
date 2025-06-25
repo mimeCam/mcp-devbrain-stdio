@@ -8,11 +8,13 @@ It's kind of like a web search, but specifically tuned for high-quality, develop
 
 _**For example**, when you are implementing feature "A", DevBrain can pull related articles that would serve as a solid reference and a foundation for your implementation._
 
+<a href="https://glama.ai/mcp/servers/@mimeCam/mcp-devbrain-stdio">
+  <img width="380" height="200" src="https://glama.ai/mcp/servers/@mimeCam/mcp-devbrain-stdio/badge" alt="DevBrain MCP server" />
+</a>
+
 | <img width="400" alt="usage-claude" src="https://github.com/user-attachments/assets/f87b80ee-7829-43e8-9223-a02a38b4fd12" /> | [![](https://github.com/user-attachments/assets/a0525745-8435-4cce-aadb-418e6af81a21)](https://youtu.be/7UFtKqI9CjQ) |
 |:--------:|:--------:|
 | Claude app | Goose app (tap on an image to open utube) |
-
-
 
 DevBrain returns articles as short description + URL, you can then:
  - instruct LLM agent like `Claude` or `Goose` to fetch full contents of the articles using provided URLs
@@ -61,7 +63,6 @@ sudo ln -s ~/.local/bin/uvx /usr/local/bin/uvx
 sudo ln -s ~/.local/bin/uv /usr/local/bin/uv
 ```
 and restart Claude.
-
 
 ## Integration for Cline and other AI agents
 Command to start DevBrain MCP in `stdio` mode:
