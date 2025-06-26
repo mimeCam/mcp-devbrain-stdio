@@ -8,7 +8,7 @@
 
 DevBrain pulls up relevant code snippets, indie developer articles, and blog posts, all based on what you're looking for.
 
-It's kind of like a web search, but specifically tuned for high-quality, developer-curated content. You can easily plug in your favorite newsletters to expand its knowledge base even further.
+It's kind of like a web search, but specifically tuned for high-quality, developer-curated content. You can easily plug in your favorite newsletter to expand its knowledge base even further.
 
 _**For example**, when you are implementing feature "A", DevBrain can pull related articles that would serve as a solid reference and a foundation for your implementation._
 
@@ -89,7 +89,7 @@ You can run this MCP as a Docker container in STDIO mode. First build an image w
         "run",
         "-i",
         "--rm",
-        "mcp-devbrain-stdio:my"
+        "svenai/mcp-devbrain-stdio:latest"
       ]
     }
   }
@@ -97,7 +97,7 @@ You can run this MCP as a Docker container in STDIO mode. First build an image w
 ```
 Test command to verify that docker container works correctly:
 ```bash
-docker run -i --rm mcp-devbrain-stdio:my
+docker run -i --rm svenai/mcp-devbrain-stdio:latest
 ```
 
 ## License

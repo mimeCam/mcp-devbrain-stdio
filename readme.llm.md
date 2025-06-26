@@ -4,8 +4,6 @@ This folder contains sources for devbrain mcp server (local on-client mcp server
 
 `dev.sh` is used to start a development container. It usually needs to be launched once - do not do it - I will run this command myself once - only remind me about the command. You may look for docker logs for the container occasionally to confirm there are no errors during the build process.
 
-`build.sh` is used to build docker image. I may ask you to do it occasionally.
-
 To test a specific tool use `test.sh`. It pipes stdin/out/err so that you can send and receive MCP protocol data directly and test various MCP tools. Tests are located in `tests` folder. Execute `tests.sh` with a test name where test name is a name of the test file from `tests` folder.
 
 See `deployment.md` for instructions on how to deploy the project to pypi.
