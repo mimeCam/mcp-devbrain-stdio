@@ -1,3 +1,5 @@
+[![MseeP.ai Security Assessment Badge](https://mseep.net/pr/mimecam-mcp-devbrain-stdio-badge.png)](https://mseep.ai/app/mimecam-mcp-devbrain-stdio)
+
 # DevBrain MCP Server
 
 **Chat with your favorite newsletters** (coding, tech, founder).
