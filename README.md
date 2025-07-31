@@ -1,12 +1,13 @@
-[![MseeP.ai Security Assessment Badge](https://mseep.net/pr/mimecam-mcp-devbrain-stdio-badge.png)](https://mseep.ai/app/mimecam-mcp-devbrain-stdio)
-
 # DevBrain MCP Server
 
 **Chat with your favorite newsletters** (coding, tech, founder).
 
-<a href="https://glama.ai/mcp/servers/@mimeCam/mcp-devbrain-stdio">
-  <img width="380" height="200" src="https://glama.ai/mcp/servers/@mimeCam/mcp-devbrain-stdio/badge" alt="DevBrain MCP server" />
-</a>
+# Audit
+
+| <a href="https://glama.ai/mcp/servers/@mimeCam/mcp-devbrain-stdio">
+  <img width="380" height="200" src="https://glama.ai/mcp/servers/@mimeCam/mcp-devbrain-stdio/badge" alt="DevBrain MCP server" /></a> | [![MseeP.ai Security Assessment Badge](https://mseep.net/pr/mimecam-mcp-devbrain-stdio-badge.png)](https://mseep.ai/app/mimecam-mcp-devbrain-stdio) |
+
+# About 
 
 DevBrain pulls up relevant code snippets, indie developer articles, and blog posts, all based on what you're looking for.
 
@@ -101,6 +102,7 @@ Test command to verify that docker container works correctly:
 ```bash
 docker run -i --rm svenai/mcp-devbrain-stdio:latest
 ```
+
 
 ## License
 This project is released under the MIT License and is developed by mimeCam as an open-source initiative.
