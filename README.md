@@ -6,6 +6,8 @@
 
 | <a href="https://glama.ai/mcp/servers/@mimeCam/mcp-devbrain-stdio">
   <img width="380" height="200" src="https://glama.ai/mcp/servers/@mimeCam/mcp-devbrain-stdio/badge" alt="DevBrain MCP server" /></a> | [![MseeP.ai Security Assessment Badge](https://mseep.net/pr/mimecam-mcp-devbrain-stdio-badge.png)](https://mseep.ai/app/mimecam-mcp-devbrain-stdio) |
+|:--------:|:--------:|
+|  |  |
 
 # About 
 
