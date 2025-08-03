@@ -48,6 +48,7 @@ and insert `devbrain` to existing `mcpServers` block like so:
     "devbrain": {
       "command": "uvx",
       "args": [
+        "--python '>=3.10'",
         "--force-reinstall",
         "--from",
         "devbrain",
@@ -75,7 +76,7 @@ and restart Claude.
 ## Integration for Cline and other AI agents
 Command to start DevBrain MCP in `stdio` mode:
 ```bash
-uvx --force-reinstall --from devbrain devbrain-stdio-server
+uvx --python ">=3.10" --force-reinstall --from devbrain devbrain-stdio-server
 ```
 and add this command to a config file of the AI agent (Cline or other).
 
