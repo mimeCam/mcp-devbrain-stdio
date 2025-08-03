@@ -9,7 +9,7 @@
 |:--------:|:--------:|
 |  | [![Verified on MseeP](https://mseep.ai/badge.svg)](https://mseep.ai/app/121bc8fb-67e7-4d57-b953-2d30b91cdfb5) |
 
-# About 
+# About
 
 It is a newsletter-based MCP that searches for relevant code snippets, indie developer articles and blog posts so you don't have to hunt through generic web results again. Just ask LLM: "research <topic> on devbrain"
 
@@ -48,6 +48,7 @@ and insert `devbrain` to existing `mcpServers` block like so:
     "devbrain": {
       "command": "uvx",
       "args": [
+        "--force-reinstall",
         "--from",
         "devbrain",
         "devbrain-stdio-server"
@@ -57,7 +58,9 @@ and insert `devbrain` to existing `mcpServers` block like so:
 }
 ```
 
-[Claude is known to fail](https://gist.github.com/gregelin/b90edaef851f86252c88ecc066c93719) when working with `uv` and `uvx` binaries. See related: https://gist.github.com/gregelin/b90edaef851f86252c88ecc066c93719. If you encounter this error then run these commands in a Terminal:
+Claude issues:
+- Somehow it fails to get the latest version even when OS has it installed. Forcing an update (at least once) is required for Claude app. This is done with `--force-reinstall` arg.
+- [Claude is known to fail](https://gist.github.com/gregelin/b90edaef851f86252c88ecc066c93719) when working with `uv` and `uvx` binaries. See related: https://gist.github.com/gregelin/b90edaef851f86252c88ecc066c93719. If you encounter this error then run these commands in a Terminal:
 ```bash
 sudo mkdir -p /usr/local/bin
 ```
@@ -72,15 +75,15 @@ and restart Claude.
 ## Integration for Cline and other AI agents
 Command to start DevBrain MCP in `stdio` mode:
 ```bash
-uvx --from devbrain devbrain-stdio-server
+uvx --force-reinstall --from devbrain devbrain-stdio-server
 ```
 and add this command to a config file of the AI agent (Cline or other).
 
 Note that DevBrain requires Python 3.10+ support. Most systems have it installed. However VS Code (that Cline depends on) is shipped with Python 3.9. Use correct version of Python when running DevBrain MCP. A corrected version to launch DevBrain MCP looks like this:
 ```bash
-uvx  --python 3.10 --from devbrain devbrain-stdio-server
+uvx --python 3.10 --force-reinstall --from devbrain devbrain-stdio-server
 ```
-where Python version may be 3.10, 3.12, 3.13 (or other that is installed and available on the system).
+where Python version may be 3.10, 3.12, 3.13 (or other that is installed and available on the system). Just not 3.9.
 
 ## Docker integration
 

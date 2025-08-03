@@ -60,10 +60,11 @@ To run locally:
 ```bash
 uvx --from devbrain devbrain-stdio-server
 ```
-to force new update download:
+to force new update check/download:
 ```bash
 uvx --force-reinstall --from devbrain devbrain-stdio-server
  ```
+Somehow `Claude` fails to get the latest update, even when OS has it installed. Forcing an update (at least once) is required when using Claude app.
 
 When deployment to `prod` env finished successfully show URL to the project on test.pypi: `https://pypi.org/project/devbrain`. Also output a testing command to let user know how to verify that just uploaded tool works correctly.
 
