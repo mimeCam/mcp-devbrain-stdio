@@ -11,7 +11,7 @@
 
 # About 
 
-It is a newsletter-powered MCP that searches for relevant code snippets, indie developer articles and blog posts so you don't have to hunt through generic web results again. Just ask LLM: "research <topic> on devbrain"
+It is a newsletter-based MCP that searches for relevant code snippets, indie developer articles and blog posts so you don't have to hunt through generic web results again. Just ask LLM: "research <topic> on devbrain"
 
 It's kind of like a web search, but specifically tuned for high-quality, developer-curated content. You can easily plug in your favorite newsletter to expand its knowledge base even further.
 
