@@ -2,7 +2,7 @@
 
 This folder contains sources for devbrain mcp server (local on-client mcp server with stdio transport). It is build on top of [FastMCP python framework](https://gofastmcp.com/getting-started/quickstart)
 
-`dev.sh` is used to start a development container. It usually needs to be launched once - do not do it - I will run this command myself once - only remind me about the command. You may look for docker logs for the container occasionally to confirm there are no errors during the build process.
+`dev.sh` is used to start a development container - but do not execute it. It usually needs to be launched once - do not do it - I will run this command myself once - only remind me about the command. You may look for docker logs for the container occasionally to confirm there are no errors during the build process.
 
 To test a specific tool use `test.sh`. It pipes stdin/out/err so that you can send and receive MCP protocol data directly and test various MCP tools. Tests are located in `tests` folder. Execute `tests.sh` with a test name where test name is a name of the test file from `tests` folder.
 

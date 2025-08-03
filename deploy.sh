@@ -1,7 +1,6 @@
 #!/bin/bash
 
-# Exit immediately if a command exits with a non-zero status.
-set -e
+set -e # Exit immediately if aany command fails with a non-zero status.
 
 VARIANT="$1"
 

@@ -5,7 +5,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "devbrain"
-version = "1.0.8"
+version = "1.1.6"
 authors = [{ name = "Anton", email = "anton@mimecam.com" }]
 description = "A FastMCP server for DevBrain stdio communication."
 readme = "README.md"
@@ -24,4 +24,4 @@ Homepage = "https://github.com/mimeCam/devbrain-stdio"
 "Bug Tracker" = "https://github.com/mimeCam/devbrain-stdio/issues"
 
 [project.scripts]
-devbrain-stdio-server = "mcp_server.server:main" # Assuming 'main' is a function in src/mcp_server/server.py
+devbrain-stdio-server = "mcp_server.server:main" # NOTE: - this should not include `src.` prefix. Otherwise this error is triggered: `from src.mcp_server.server import main. ModuleNotFoundError: No module named 'src'`
