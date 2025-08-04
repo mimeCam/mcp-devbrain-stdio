@@ -3,7 +3,7 @@
 
 
 ### Step 1 - bump version
-Increase version in `pyproject.toml`.
+Increase version in `pyproject.toml` and `post-update.builder`.
 Remember to increment the version before running `deploy.sh`.
 
 
