@@ -9,12 +9,16 @@ from fastmcp import FastMCP
 mcp_server = FastMCP(
     name="DevBrain - MCP Server for Indie Developers and Founders",
     instructions="""DevBrain provides up-to-date insights curated by real software developers.
-Available tools:
-- Call `retrieve_knowledge` tool and pass a question to search for related information. Results may include developer blogs, guides and code snippets.
-- Use `read_full_article` tool to get the full contents of a specific article by its URL.
-- Use `get_swiftui_view_from_3designs` to return a production-ready SwiftUI view components. This tool is designed for iOS/macOS/visionOS UI development. It integrates with `3designs` platform (https://devbrain.io/3designs).
 
-Note: DevBrain's knowledge consist of software enginering data only.
+Available knowledge tools:
+- Call `retrieve_knowledge` to search for related information by passing a question. Results may include developer blogs, guides, and code snippets.
+- Use `read_full_article` to get the full contents of a specific article by its URL.
+
+Available design & code tools:
+- Use `search_swiftui_on_3designs` to search for prominent SwiftUI view components with source code. Great for improving your iOS app - for example, ask it to help restyle your existing views.
+- Use `get_swiftui_view_from_3designs` to get production-ready SwiftUI view components. Designed for iOS/macOS/visionOS UI development.
+
+Note: DevBrain's knowledge consists of software engineering data only.
 """,
 )
 
@@ -93,6 +97,40 @@ def read_full_article(url: str) -> str:
 
 
 @mcp_server.tool
+def search_swiftui_on_3designs(
+    query: str,
+    # tags: str | None = None
+) -> str:
+    """Searches the 3designs system for reference SwiftUI view components.
+
+    Args:
+        query: Description of the desired view component (e.g., purpose, user intent, functionality, or visual appearance the view should implement).
+
+    Returns:
+        str: SwiftUI view components with descriptions and implementation codes
+    """
+
+    token_error = _enforce_token()
+    if token_error:
+        return token_error
+
+    url = f"{api_host_base}/3designs/find"
+    headers = {
+        "authorization": f"Bearer 3d_{_token}",
+        "content-type": "application/json",
+    }
+    data = {"q": query}
+    # if tags:
+    #     data["tags"] = tags
+    try:
+        response = requests.post(url, headers=headers, json=data)
+        response.raise_for_status()  # Raise an HTTPError for bad responses (4xx or 5xx)
+        return response.text
+    except requests.exceptions.RequestException:
+        return "Could not perform a search at this time for this query. API error occurred - `3designs` service is temporarily unavailable."
+
+
+@mcp_server.tool
 def get_swiftui_view_from_3designs(code: str) -> str:
     """Returns a SwiftUI view code from `3designs` system (see: https://devbrain.io/3designs) by view's unique code.
 
@@ -112,7 +150,7 @@ def get_swiftui_view_from_3designs(code: str) -> str:
 
     url = f"https://api.getsven.com/3designs/download/{code}/swiftUI"
     headers = {
-        "authorization": f"Bearer {_token}",
+        "authorization": f"Bearer 3d_{_token}",
     }
 
     try:
