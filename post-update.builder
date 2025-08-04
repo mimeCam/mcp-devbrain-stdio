@@ -9,7 +9,7 @@ fi
 
 cd "$(dirname "$0")"
 
-VERSION="1.1.8"
+VERSION="1.1.9"
 
 IMAGE_NAME_ROOT="svenai/mcp-devbrain-stdio"
 IMAGE_NAME_VERSION="$IMAGE_NAME_ROOT:$VERSION"
