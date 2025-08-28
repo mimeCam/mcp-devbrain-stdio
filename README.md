@@ -37,6 +37,11 @@ Example command to run MCP server in `stdio` mode:
 uvx --python ">=3.10" --from devbrain devbrain-stdio-server
 ```
 
+## Use in Claude Code
+
+https://docs.anthropic.com/en/docs/claude-code/mcp#installing-mcp-servers
+You can either add MCP to cc manually or reference tthe same .json file that Claude app uses.
+
 ## Use in Claude
 
 To add `devbrain` to Claude's config, edit the file:
