@@ -17,7 +17,7 @@ classifiers = [
     "Operating System :: OS Independent",
     'Intended Audience :: Developers',
 ]
-dependencies = ["fastmcp", "requests"]
+dependencies = ["fastmcp", "requests", "uvicorn[standard]"]
 
 [project.urls]
 Homepage = "https://github.com/mimeCam/mcp-devbrain-stdio"

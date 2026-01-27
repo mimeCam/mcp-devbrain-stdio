@@ -88,10 +88,30 @@ def read_full_article(url: str) -> str:
         return "Full article for the given URL is not available at this time. API error occurred - DevBrain knowledge base service is temporarily unavailable."
 
 
-def main():
-    # print(f"Server: {api_host_base}")
-    mcp_server.run()
+def main(transport: str = "stdio", host: str = "0.0.0.0", port: int = 8000):
+    if transport == "http":
+        print(f"Starting MCP server with HTTP transport on http://{host}:{port}/mcp")
+        mcp_server.run(transport="http", host=host, port=port)
+    else:
+        mcp_server.run()
 
 
 if __name__ == "__main__":
-    main()
+    import argparse
+
+    parser = argparse.ArgumentParser(description="DevBrain MCP Server")
+    parser.add_argument(
+        "--transport",
+        choices=["stdio", "http"],
+        default="stdio",
+        help="Transport mode (default: stdio)",
+    )
+    parser.add_argument(
+        "--host", default="0.0.0.0", help="Host for HTTP transport (default: 0.0.0.0)"
+    )
+    parser.add_argument(
+        "--port", type=int, default=8000, help="Port for HTTP transport (default: 8000)"
+    )
+
+    args = parser.parse_args()
+    main(transport=args.transport, host=args.host, port=args.port)
