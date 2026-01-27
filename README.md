@@ -25,7 +25,16 @@ DevBrain returns articles as short description + URL, you can then:
  - instruct LLM agent like `Claude` or `Goose` to fetch full contents of the articles using provided URLs
  - instruct LLM to implement a feature based on all or selected articles
 
-## Installation and Usage
+## Try quickly with remote http-transport MCP
+
+```json
+"devbrain": {
+    "type": "http",
+    "url": "https://devbrain.svenai.com/mcp"
+},
+```
+
+## Local Installation (remote http mcp recommended)
 
 Via `uv` or `uvx`. Install `uv` and `uvx` (if not installed):
 ```bash
@@ -37,7 +46,7 @@ Example command to run MCP server in `stdio` mode:
 uvx --python ">=3.10" --from devbrain devbrain-stdio-server
 ```
 
-## Use in Claude Code
+## Use in Claude Code (or other coding agents)
 
 https://docs.anthropic.com/en/docs/claude-code/mcp#installing-mcp-servers
 You can either add MCP to cc manually or reference tthe same .json file that Claude app uses.
